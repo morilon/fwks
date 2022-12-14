@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>11.0</LangVersion>
+        <AssemblyName>Fwks.ExampleService.Core</AssemblyName>
+        <RootNamespace>Fwks.ExampleService.Core</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\libs\Core\Core.csproj" />
+    </ItemGroup>
+
+</Project>

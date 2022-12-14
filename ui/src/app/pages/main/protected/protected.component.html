@@ -1,0 +1,32 @@
+<div class="text-center mt-2">
+    <p class="h1">THIS IS A PROTECTED PAGE.</p>
+    <p> Id: {{ user.id }} </p>
+    <p> Name: {{ user.firstName }} {{ user.lastName}}</p>
+    <p>Email: {{ user.email }}</p>
+</div>
+
+<hr>
+
+<form [formGroup]="form">
+    <div class="input-group mb-3">
+        <input formControlName="name" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button (click)="searchCustomers()" class="btn btn-outline-secondary" type="button">Search</button>
+        </div>
+    </div>
+</form>
+
+<ng-container *ngFor="let customer of customers">
+    <p class="m-0 mt-1">{{ customer.id }} / {{ customer.name }} - {{ customer.email }} - {{ customer.phone }}</p>
+</ng-container>
+
+<div *ngIf="fetch && customers.length === 0" class="my-2 alert alert-warning" role="alert">
+    <h5 class="alert-heading">No customers were found.</h5>
+</div>
+
+<div *ngIf="error !== undefined" class="my-2 alert alert-danger" role="alert">
+    <h5 class="alert-heading"> {{ error.message }} <sup><small>{{ error.correlationId }}</small></sup></h5>
+    <ng-container *ngFor="let notification of error.notifications">
+        <p class="m-0 mt-1">{{ notification }}</p>
+    </ng-container>
+</div>

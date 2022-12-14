@@ -1,0 +1,101 @@
+// Default Pallete https://flatuicolors.com/palette/defo
+$turquoise: #1abc9c !default;
+$greenSea: #16a085 !default;
+$emerald: #2ecc71 !default;
+$nephritis: #27ae60 !default;
+$peter-river: #3498db !default;
+$belize-hole: #2980b9 !default;
+$amethyst: #9b59b6 !default;
+$wisteria: #8e44ad !default;
+$wet-asphalt: #34495e !default;
+$midnight-blue: #2c3e50 !default;
+$sun-flower: #f1c40f !default;
+$orange: #f39c12 !default;
+$pumpkin: #d35400 !default;
+$carrot: #e67e22 !default;
+$alizarin: #e74c3c !default;
+$pomegranate: #c0392b !default;
+$clouds: #ecf0f1 !default;
+$silver: #bdc3c7 !default;
+$concrete: #95a5a6 !default;
+$asbestos: #7f8c8d !default;
+
+$american-pallete: () !default;
+$american-pallete: map-merge(
+    (
+        "alizarin": $alizarin,
+        "amethyst": $amethyst,
+        "asbestos": $asbestos,
+        "belize-hole": $belize-hole,
+        "carrot": $carrot,
+        "clouds": $clouds,
+        "concrete": $concrete,
+        "emerald": $emerald,
+        "green-sea": $greenSea,
+        "midnight-blue": $midnight-blue,
+        "nephritis": $nephritis,
+        "orange": $orange,
+        "peter-river": $peter-river,
+        "pomegranate": $pomegranate,
+        "pumpkin": $pumpkin,
+        "silver": $silver,
+        "sun-flower": $sun-flower,
+        "turquoise": $turquoise,
+        "wet-asphalt": $wet-asphalt,
+        "wisteria": $wisteria,
+    ),
+    $american-pallete
+);
+
+// Canadian Pallete - https://flatuicolors.com/palette/ca
+$jigglypuff: #ff9ff3 !default;
+$lian-hong-lotus-pink: #f368e0 !default;
+$casandora-yellow: #feca57 !default;
+$double-dragon-skin: #ff9f43 !default;
+$pastel-red: #ff6b6b !default;
+$amour: #ee5253 !default;
+$megaman: #48dbfb !default;
+$cyanite: #0abde3 !default;
+$wild-caribbean-green: #1dd1a1 !default;
+$dark-mountain-meadow: #10ac84 !default;
+$jade-dust: #00d2d3 !default;
+$aqua-velvet: #01a3a4 !default;
+$joust-blue: #54a0ff !default;
+$bleu-de-france: #2e86de !default;
+$nasu-purple: #5f27cd !default;
+$blue-bell: #341f97 !default;
+$light-blue-ballerina: #c8d6e5 !default;
+$storm-petrel: #8395a7 !default;
+$fuel-town: #576574 !default;
+$imperial-primer: #222f3e !default;
+
+$canadian-pallete: () !default;
+$canadian-pallete: map-merge(
+    (
+        "jigglypuff": $jigglypuff,
+        "lian-hong-lotus-pink": $lian-hong-lotus-pink,
+        "casandora-yellow": $casandora-yellow,
+        "double-dragon-skin": $double-dragon-skin,
+        "pastel-red": $pastel-red,
+        "amour": $amour,
+        "megaman": $megaman,
+        "cyanite": $cyanite,
+        "wild-caribbean-green": $wild-caribbean-green,
+        "dark-mountain-meadow": $dark-mountain-meadow,
+        "jade-dust": $jade-dust,
+        "aqua-velvet": $aqua-velvet,
+        "joust-blue": $joust-blue,
+        "bleu-de-france": $bleu-de-france,
+        "nasu-purple": $nasu-purple,
+        "blue-bell": $blue-bell,
+        "light-blue-ballerina": $light-blue-ballerina,
+        "storm-petrel": $storm-petrel,
+        "fuel-town": $fuel-town,
+        "imperial-primer": $imperial-primer,
+    ),
+    $canadian-pallete
+);
+
+// App Colors Pallete
+$app-colors: () !default;
+$app-colors: map-merge($american-pallete, $canadian-pallete);

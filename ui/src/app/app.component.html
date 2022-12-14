@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/favicon.ico" class="d-inline-block align-top" width="30" height="30" alt="app icon">
+            Template UI - {{ envName }}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbar-default">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="home" routerLink="/home">Home</a>
+                </li>
+                <li *ngIf="session.isLoggedIn" class="nav-item">
+                    <a class="nav-link" aria-current="protected" routerLink="protected">Protected</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown Menu
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                        <li><a class="dropdown-item" href="/">Some action</a></li>
+                        <li><a class="dropdown-item" href="/">Another action</a></li>
+                        <li><a class="dropdown-item" href="/">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-end mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" (click)="session.isLoggedIn ? session.logout() : session.login() " routerLink="">
+                        {{ session.isLoggedIn ? 'Logout' : 'Login' }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container" role="main">
+    <router-outlet></router-outlet>
+</main>

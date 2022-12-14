@@ -1,0 +1,14 @@
+<button (click)="confirmation()" class="btn btn-primary mt-2">Open Confirmation Modal</button>
+
+<p>Modal result: {{ modalResult }}</p>
+
+<p>pagination example</p>
+<p *ngFor="let it of items | paginate: { page: page, pageSize: 1 }; trackBy: trackId">
+    {{ it }}
+</p>
+
+<app-pagination [(ngModel)]="page" [collection]="items" [pageSize]="1"></app-pagination>
+
+<canvas baseChart class="chart" [data]="chartData" [options]="chartOptions" [plugins]="chartPlugins" [type]="chartType">
+
+</canvas>

@@ -1,0 +1,67 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@env": [
+        "src/environments/environment"
+      ],
+      "@app/services": [
+        "src/app/core/services/index.ts"
+      ],
+      "@app/guards": [
+        "src/app/core/guards/index.ts"
+      ],
+      "@app/providers": [
+        "src/app/code/providers/_providers.ts"
+      ],
+      "@app/configs": [
+        "src/app/configs/index.ts"
+      ],
+      "@app/enums": [
+        "src/app/domain/enums/index.ts"
+      ],
+      "@pages/main": [
+        "src/app/pages/main/index.ts"
+      ],
+      "@app/components": [
+        "src/app/shared/components/index.ts"
+      ],
+      "@app/directives": [
+        "src/app/shared/directives/index.ts"
+      ],
+      "@app/functions": [
+        "src/app/shared/functions/_fn.ts"
+      ],
+      "@app/pipes": [
+        "src/app/shared/pipes/index.ts"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
