@@ -21,8 +21,8 @@ public static class AggregateBuilder
     {
         return AggregateFacet.Create(ItemsFacetId, PipelineDefinition<TEntity, TEntity>.Create(new[]
         {
-        PipelineStageDefinitionBuilder.Skip<TEntity>((currentPage - 1) * pageSize),
-        PipelineStageDefinitionBuilder.Limit<TEntity>(pageSize)
-    }));
+            PipelineStageDefinitionBuilder.Skip<TEntity>((currentPage - 1) * pageSize),
+            PipelineStageDefinitionBuilder.Limit<TEntity>(pageSize)
+        }));
     }
 }

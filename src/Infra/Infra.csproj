@@ -21,9 +21,9 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\libs\MongoDb\MongoDb.csproj" />
         <ProjectReference Include="..\..\libs\Postgres\Postgres.csproj" />
         <ProjectReference Include="..\Core\Core.csproj" />
-        <ProjectReference Include="..\MongoDb\MongoDb.csproj" />
     </ItemGroup>
 
 </Project>
